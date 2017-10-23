@@ -13,7 +13,7 @@ class Library extends Component {
       <section className="library">
 {
   this.state.albums.map((album, index) =>
-    <Link to={`/album/${album.slug}`}>
+    <Link key={index} to={`/album/${album.slug}`}>
       { album.title }
       <img src= { album.albumCover } />
       <div>{ album.title }</div>
