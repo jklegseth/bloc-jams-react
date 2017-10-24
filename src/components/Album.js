@@ -10,7 +10,38 @@ class Album extends Component {
     });
 
     this.state = {
-      album: album
+      album: album,
+      currentSong: album.songs[0],
+      isPlaying: false
+    }
+
+    this.audioElement = document.createElement('audio');
+    this.audioElement.src = album.songs[0].audioSrc;
+    console.log(this.audioElement);
+  }
+
+  play(song) {
+    this.audioElement.play();
+    this.setState({ isPlaying: true });
+  }
+
+  pause(song) {
+    this.audioElement.pause();
+    this.setState({ isPlaying: false });
+  }
+
+  setSong(song) {
+    this.audioElement.src = song.audioSrc;
+    this.setState({ currentSong: song });
+  }
+
+  handleSongClick(song) {
+    const isSameSong = this.state.currentSong === song;
+    if (this.state.isPlaying && isSameSong) {
+      this.pause(song);
+    } else {
+      if (!isSameSong) { this.setSong(song); }
+      this.play(song);
     }
   }
 
@@ -18,7 +49,7 @@ class Album extends Component {
     return (
       <div>
         <section id="album-info">
-          <img id="album-cover-art" src={ this.state.album.albumCover } />
+          <img id="album-cover-art" src={ this.state.album.albumCover } alt={this.state.album.title} />
           <div className="album-details">
             <h1 id="album-title">{ this.state.album.title }</h1>
             <h2 className="artist">{ this.state.album.artist }</h2>
@@ -30,12 +61,16 @@ class Album extends Component {
             <col id="song-number-column" />
             <col id="song-title-column" />
             <col id="song-duration-column" />
-          </colgroup>  
+          </colgroup>
           <tbody>
           {
-            this.state.album.songs.map((song, index) => 
-              <tr className="album-view-song-item" key={ index }>
-                <td className="song-item-number" data-song-number={ index + 1 }>{ index + 1 }</td>
+            this.state.album.songs.map((song, index) =>
+              <tr className="song" key={ index } onClick={() => this.handleSongClick(song)}>
+                <td className="song-actions">
+                  <span className="song-number">{index+1}</span>
+                  <span className="ion-play"></span>
+                  <span className="ion-pause"></span>
+                </td>
                 <td className="song-item-title">{ song.title }</td>
                 <td className="song-item-duration">{ song.duration }</td>
               </tr>
