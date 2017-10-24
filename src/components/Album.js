@@ -14,6 +14,8 @@ class Album extends Component {
     this.state = {
       album: album,
       currentSong: album.songs[0],
+      currentTime: 0,
+      duration: album.songs[0].duration,
       isPlaying: false
     }
 
@@ -63,6 +65,33 @@ class Album extends Component {
     this.play(newSong);
   }
 
+  handleTimeChange(e) {
+    const newTime = this.audioElement.duration * e.target.value;
+    this.audioElement.currentTime = newTime;
+    this.setState({ currentTime: newTime });
+  }
+
+  formatTime(seconds) {
+    const minutes = Math.floor(seconds/60);
+    seconds = Math.floor(seconds - minutes * 60);
+    seconds = seconds < 10 ? `0${seconds}` : seconds;
+
+    // avoid flashing `NaN:NaN`
+    if (Number.isNaN(minutes) || Number.isNaN(seconds)) return;
+
+    return `${minutes}:${seconds}`;
+  }
+
+  componentDidMount() {
+    this.audioElement.addEventListener('timeupdate', e => {
+      this.setState({ currentTime: this.audioElement.currentTime })
+    });
+
+    this.audioElement.addEventListener('durationchange', e => {
+      this.setState({ duration: this.audioElement.duration })
+    });
+  }
+
   render() {
     return (
       <div>
@@ -90,7 +119,7 @@ class Album extends Component {
                   <span className="ion-pause"></span>
                 </td>
                 <td className="song-item-title">{ song.title }</td>
-                <td className="song-item-duration">{ song.duration }</td>
+                <td className="song-item-duration">{ this.formatTime(song.duration) }</td>
               </tr>
             )
           }
@@ -99,9 +128,13 @@ class Album extends Component {
         <PlayerBar
           isPlaying={ this.state.isPlaying }
           currentSong={ this.state.currentSong }
+          currentTime={ this.audioElement.currentTime }
+          duration={ this.audioElement.duration }
           handleSongClick={ () => this.handleSongClick(this.state.currentSong) }
           handlePrevClick={ () => this.handlePrevClick() }
           handleNextClick={ () => this.handleNextClick() }
+          handleTimeChange={ (e) => this.handleTimeChange(e) }
+          formatTime={ (seconds) => this.formatTime(seconds) }
         />
       </div>
     );
