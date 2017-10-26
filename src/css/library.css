@@ -1,0 +1,74 @@
+.library {
+  background-image: url(./images/music-concert-background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: left;
+  padding: 0 25px;
+}
+
+.album-covers {
+  position: relative;
+}
+
+.album-covers {
+  display: flex;
+}
+
+.library-album {
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  position: relative;
+  text-decoration: none;
+  width: 33%;
+}
+
+
+.library-album-cover {
+  width: 80%;
+}
+
+.library-album:hover .library-album-cover {
+  opacity: .5;
+}
+
+.library-album-info {
+  margin-top: 10px;
+}
+
+.library-album-info p {
+  font-weight: 300;
+  margin: .5rem 1rem
+}
+
+.library-album-artist,
+.library-album-songs {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.library-album-name {
+  color: white;
+  font-size: 1rem;
+}
+
+.library-album-songs {
+  font-size: .75rem;
+}
+
+@media (max-width: 900px) {
+  .library-album {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .library-album {
+    width: 100%;
+  }
+}

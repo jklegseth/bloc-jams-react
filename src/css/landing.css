@@ -1,0 +1,60 @@
+.hero-content {
+  position: relative;
+  min-height: 600px;
+  background-image: url(./images/rock-music-wallpaper-23.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.hero-title {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  text-shadow: 1px 1px 14px #a779c9;
+}
+
+.selling-points {
+  display: flex;
+  flex-direction: row;
+  margin-top: -100px;
+  position: relative;
+}
+
+.point {
+  flex: 1 1;
+  position: relative;
+  padding: 1rem;
+  text-align: center;
+}
+
+.point-title {
+  font-size: 1.25rem;
+  margin: 15px 0 0;
+}
+
+.point-description {
+  line-height: 1.5rem;
+}
+
+.ion-music-note, .ion-radio-waves, .ion-iphone {
+  color: #a779c9;
+  font-size: 5rem;
+}
+
+@media (max-width: 900px) {
+  .selling-points {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .point-title {
+    margin: 0;
+  }
+}

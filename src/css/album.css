@@ -1,0 +1,86 @@
+.album {
+  background-image: url(./images/music_concert.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+
+.album-cover {
+  position: relative;
+  left: 20%;
+  margin-top: 1rem;
+  width: 60%;
+}
+
+.album-song-list-container {
+  padding-bottom: 130px;
+}
+
+.album-details {
+  position: relative;
+  top: 1.5rem;
+  padding: 1rem;
+}
+
+.album-title {
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.album-artist {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.album-release-info {
+  font-weight: 300;
+  font-size: 0.75rem;
+}
+
+.album-song-list {
+  width: 90%;
+  margin: 1.5rem auto;
+  font-weight: 300;
+  font-size: 0.85rem;
+  border-collapse: collapse;
+}
+
+.album-song-button {
+  text-align: center;
+  font-size: 14px;
+  background-color: white;
+  color: rgb(210, 40, 123);
+  border-radius: 50% 50%;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+}
+
+.album-song-button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgb(210, 40, 123);
+}
+
+.album-song-button span {
+  line-height: 28px;
+}
+
+@media (max-width: 640px) and (min-width: 320px) {
+  .album-details {
+    text-align: center;
+  }
+  .album-title {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 320px) {
+  .album-song-list {
+    position: relative;
+    top: 1rem;
+    width: 80%;
+    margin: auto;
+  }
+}
