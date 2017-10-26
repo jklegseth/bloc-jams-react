@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class PlayerBar extends Component {
   render() {
@@ -48,6 +49,22 @@ class PlayerBar extends Component {
       </section>
     );
   }
+}
+
+PlayerBar.propTypes = {
+  isPlaying: PropTypes.bool.isRequired,
+  currentSong: PropTypes.object.isRequired,
+  currentVolume: PropTypes.number.isRequired,
+  isMuted: PropTypes.bool.isRequired,
+  handleSongClick: PropTypes.func.isRequired,
+  handlePrevClick: PropTypes.func.isRequired,
+  handleNextClick: PropTypes.func.isRequired,
+  handleTimeChange: PropTypes.func.isRequired,
+  handleVolumeChange: PropTypes.func.isRequired,
+  formatTime: PropTypes.func.isRequired,
+  toggleMute: PropTypes.func.isRequired,
+  currentTime: PropTypes.number,
+  duration: PropTypes.number,
 }
 
 export default PlayerBar;

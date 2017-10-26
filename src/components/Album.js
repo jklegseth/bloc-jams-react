@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
 import SongRow from './SongRow';
@@ -52,7 +53,6 @@ class Album extends Component {
   }
 
   toggleMute() {
-    console.log(this.state.isMuted);
     if (this.state.isMuted) {
       this.setState({
         currentVolume: this.state.premuteVolume,
@@ -215,6 +215,12 @@ class Album extends Component {
       </div>
     );
   }
+}
+
+Album.propTypes = {
+  match: PropTypes.object.isRequired,
+  params: PropTypes.objectOf(PropTypes.match),
+  slug: PropTypes.objectOf(PropTypes.params),
 }
 
 export default Album;

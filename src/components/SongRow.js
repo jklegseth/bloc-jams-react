@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class SongRow extends Component {
   constructor(props) {
@@ -41,5 +42,15 @@ class SongRow extends Component {
     )
   }
 }
+
+SongRow.propTypes = {
+  isSelectedSong: PropTypes.bool.isRequired,
+  song: PropTypes.object.isRequired,
+  index: PropTypes.number.isRequired,
+  isPlaying: PropTypes.bool.isRequired,
+  isPaused: PropTypes.bool.isRequired,
+  handleSongClick: PropTypes.func.isRequired,
+}
+
 
 export default SongRow;
