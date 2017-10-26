@@ -4,6 +4,9 @@
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
+}
+
+.library-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

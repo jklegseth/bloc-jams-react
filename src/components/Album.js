@@ -173,7 +173,7 @@ class Album extends Component {
             </div>
           </div>
         </section>
-        <div className="album-song-list-container">
+        <div className="album-song-list-container container narrow">
           <table className="album-song-list">
             <colgroup>
               <col id="song-number-column" />

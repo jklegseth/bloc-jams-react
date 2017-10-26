@@ -6,7 +6,7 @@ const Landing = () => (
         <h1 className="hero-title">Turn the music up!</h1>
       </section>
 
-    <section className="selling-points">
+    <section className="selling-points container">
       <div className="point">
         <span className="ion-music-note"></span>
         <h2 className="point-title">Choose your music</h2>

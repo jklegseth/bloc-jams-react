@@ -68,6 +68,17 @@
 }
 
 @media (max-width: 640px) and (min-width: 320px) {
+  .album-cover {
+    left: 50%;
+    min-width: 250px;
+    transform: translateX(-50%);
+    width: 40%
+  }
+
+  .album-song-list-container {
+    padding-bottom: 200px;
+  }
+
   .album-details {
     text-align: center;
   }
