@@ -3,18 +3,13 @@
   border-bottom: 1px solid rgba(167, 121, 201, .5);
 }
 
-.song:hover td {
+.song:hover td,
+.song.playing td {
   background: rgba(167, 121, 201, .2);
 }
 
 .song-play-pause {
   cursor: pointer;
-  /*display: none;*/
-}
-
-.song:hover .song-play-pause,
-.song.playing .song-play-pause {
-  /*display: block;*/
 }
 
 .song.playing .icon-eq {
@@ -63,9 +58,4 @@
 .song-duration {
   padding-right: 5px;
   width: 5%;
-}
-
-
-@media (max-width: 640px) and (min-width: 320px) {
-
 }
