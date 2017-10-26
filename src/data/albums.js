@@ -1,27 +1,73 @@
 export default [{
-  title: 'The Colors',
-  artist: 'Pablo Picasso',
-  releaseInfo: '1909 Spanish Records',
-  albumCover: 'assets/images/album_covers/01.jpg',
-  slug: 'the-colors',
-  songs: [
-      { title: 'Blue', duration: '161.71', audioSrc: '../assets/music/blue.mp3' },
-      { title: 'Green', duration: '103.96', audioSrc: '../assets/music/green.mp3' },
-      { title: 'Red', duration: '268.45', audioSrc: '../assets/music/red.mp3' },
-      { title: 'Pink', duration: '153.14', audioSrc: '../assets/music/pink.mp3' },
-      { title: 'Magenta', duration: '374.22', audioSrc: '../assets/music/magenta.mp3' }
-  ]
-}, {
-    title: 'The Telephone',
-    artist: 'Guglielmo Marconi',
-    releaseInfo: '1909 EM',
-    albumCover: 'assets/images/album_covers/02.jpg',
-    slug: 'the-telephone',
+    title: 'Down Where the Spirit Meets the Bone',
+    artist: 'Lucinda Williams',
+    slug: 'down-spirit',
+    label: 'Highway 20 Records',
+    year: '2014',
+    albumCover: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Lucinda+Williams/Down+Where+the+Spirit+Meets+the+Bone/cover.jpg',
     songs: [
-      { title: 'Blue', duration: '161.71', audioSrc: '../assets/music/blue.mp3' },
-      { title: 'Green', duration: '103.96', audioSrc: '../assets/music/green.mp3' },
-      { title: 'Red', duration: '268.45', audioSrc: '../assets/music/red.mp3' },
-      { title: 'Pink', duration: '153.14', audioSrc: '../assets/music/pink.mp3' },
-      { title: 'Magenta', duration: '374.22', audioSrc: '../assets/music/magenta.mp3' }
+      { title: 'Compassion', duration: '2:57', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Lucinda+Williams/Down+Where+the+Spirit+Meets+the+Bone/01-01-+Compassion.mp3' },
+      { title: 'Protection', duration: '4:47', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Lucinda+Williams/Down+Where+the+Spirit+Meets+the+Bone/01-02-+Protection.mp3' },
+      { title: 'Burning Bridges', duration: '4:49', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Lucinda+Williams/Down+Where+the+Spirit+Meets+the+Bone/01-03-+Burning+Bridges.mp3' },
+      { title: 'East Side of Town', duration: '4:56', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Lucinda+Williams/Down+Where+the+Spirit+Meets+the+Bone/01-04-+East+Side+of+Town.mp3' },
+      { title: 'West Memphis', duration: '5:44', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Lucinda+Williams/Down+Where+the+Spirit+Meets+the+Bone/01-05-+West+Memphis.mp3' },
+      { title: 'Cold Day in Hell', duration: '5:16', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Lucinda+Williams/Down+Where+the+Spirit+Meets+the+Bone/01-06-+Cold+Day+in+Hell.mp3' },
+      { title: 'Foolishness', duration: '5:57', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Lucinda+Williams/Down+Where+the+Spirit+Meets+the+Bone/01-07-+Foolishness.mp3' },
+      { title: 'Wrong Number', duration: '5:01', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Lucinda+Williams/Down+Where+the+Spirit+Meets+the+Bone/01-08-+Wrong+Number.mp3' },
+      { title: 'Stand Right by Each Other', duration: '3:59', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Lucinda+Williams/Down+Where+the+Spirit+Meets+the+Bone/01-09-+Stand+Right+by+Each+Other.mp3' },
+      { title: 'It\'s Gonna Rain', duration: '4:18', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Lucinda+Williams/Down+Where+the+Spirit+Meets+the+Bone/01-10-+Its+Gonna+Rain.mp3' },
+      { title: 'Something Wicked This Way Comes', duration: '5:45', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Lucinda+Williams/Down+Where+the+Spirit+Meets+the+Bone/02-01-+Something+Wicked+This+Way+Comes.mp3' },
+      { title: 'Big Mess', duration: '5:32', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Lucinda+Williams/Down+Where+the+Spirit+Meets+the+Bone/02-02-+Big+Mess.mp3' },
+      { title: 'When I Look at the World', duration: '4:56', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Lucinda+Williams/Down+Where+the+Spirit+Meets+the+Bone/02-03-+When+I+Look+at+the+World.mp3' },
+      { title: 'Walk On', duration: '4:11', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Lucinda+Williams/Down+Where+the+Spirit+Meets+the+Bone/02-04-+Walk+On.mp3' },
+      { title: 'Temporary Nature (Of Any Precious Thing)', duration: '5:05', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Lucinda+Williams/Down+Where+the+Spirit+Meets+the+Bone/02-05-+Temporary+Nature+(Of+Any+Precious+Thing).mp3' },
+      { title: 'Everything but the Truth', duration: '5:11', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Lucinda+Williams/Down+Where+the+Spirit+Meets+the+Bone/02-06-+Everything+but+the+Truth.mp3' },
+      { title: 'This Old Heartache', duration: '5:03', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Lucinda+Williams/Down+Where+the+Spirit+Meets+the+Bone/02-07-+This+Old+Heartache.mp3' },
+      { title: 'Stowaway in Your Heart', duration: '3:27', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Lucinda+Williams/Down+Where+the+Spirit+Meets+the+Bone/02-08-+Stowaway+in+Your+Heart.mp3' },
+      { title: 'One More Day', duration: '6:21', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Lucinda+Williams/Down+Where+the+Spirit+Meets+the+Bone/02-09-+One+More+Day.mp3' },
+      { title: 'Magnolia', duration: '9:51', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Lucinda+Williams/Down+Where+the+Spirit+Meets+the+Bone/02-10-+Magnolia.mp3' }
     ]
+}, {
+    title: 'Complicated Game',
+    artist: 'James McMurtry',
+    slug: 'complicated-game',
+    label: 'Blue Rose',
+    year: '2015',
+    albumCover: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/James+McMurtry/Complicated+Game/cover.jpg',
+    songs: [
+      { title: 'Copper Canteen', duration: '4:38', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/James+McMurtry/Complicated+Game/01-01-+Copper+Canteen.mp3' },
+      { title: 'You Got to Me', duration: '5:23', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/James+McMurtry/Complicated+Game/01-02-+You+Got+to+Me.mp3' },
+      { title: 'Ain\'t Got a Place', duration: '2:41', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/James+McMurtry/Complicated+Game/01-03-+Aint+Got+a+Place.mp3' },
+      { title: 'She Loves Me', duration: '3:01', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/James+McMurtry/Complicated+Game/01-04-+She+Loves+Me.mp3' },
+      { title: 'How\'m I Gonna Find You Now', duration: '4:05', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/James+McMurtry/Complicated+Game/01-05-+Howm+I+Gonna+Find+You+Now.mp3' },
+      { title: 'These Things I\'ve Come to Know', duration: '3:18', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/James+McMurtry/Complicated+Game/01-06-+These+Things+Ive+Come+to+Know.mp3' },
+      { title: 'Deaver\'s Crossing', duration: '4:00', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/James+McMurtry/Complicated+Game/01-07-+Deavers+Crossing.mp3' },
+      { title: 'Carlisle\'s Haul', duration: '7:13', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/James+McMurtry/Complicated+Game/01-08-+Carlisles+Haul.mp3' },
+      { title: 'Forgotten Coast', duration: '3:34', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/James+McMurtry/Complicated+Game/01-09-+Forgotten+Coast.mp3' },
+      { title: 'South Dakota [Explicit]', duration: '5:03', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/James+McMurtry/Complicated+Game/01-10-+South+Dakota+%5BExplicit%5D.mp3' },
+      { title: 'Long Island Sound', duration: '6:47', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/James+McMurtry/Complicated+Game/01-11-+Long+Island+Sound.mp3' },
+      { title: 'Cutter', duration: '5:41', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/James+McMurtry/Complicated+Game/01-12-+Cutter.mp3' }
+    ]
+}, {
+    title: 'English Oceans',
+    artist: 'Drive-by Truckers',
+    slug: 'english-oceans',
+    label: 'ATO Records',
+    year: '2014',
+    albumCover: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Drive-by+Truckers/English+Oceans/cover.jpg',
+    songs: [
+      { title: 'Shit Shots Count [Explicit]', duration: '4:10', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Drive-by+Truckers/English+Oceans/01-01-+Shit+Shots+Count+%5BExplicit%5D.mp3' },
+      { title: 'When He\'s Gone', duration: '3:40', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Drive-by+Truckers/English+Oceans/01-02-+When+Hes+Gone.mp3' },
+      { title: 'Primer Coat', duration: '4:25', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Drive-by+Truckers/English+Oceans/01-03-+Primer+Coat.mp3' },
+      { title: 'Pauline Hawkins', duration: '6:35', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Drive-by+Truckers/English+Oceans/01-04-+Pauline+Hawkins.mp3' },
+      { title: 'Made Up English Oceans', duration: '3:27', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Drive-by+Truckers/English+Oceans/01-05-+Made+Up+English+Oceans.mp3' },
+      { title: 'The Part Of Him [Explicit]', duration: '4:28', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Drive-by+Truckers/English+Oceans/01-06-+The+Part+Of+Him+%5BExplicit%5D.mp3' },
+      { title: 'Hearing Jimmy Loud', duration: '4:45', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Drive-by+Truckers/English+Oceans/01-07-+Hearing+Jimmy+Loud.mp3' },
+      { title: 'Til He\'s Dead Or Rises', duration: '4:23', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Drive-by+Truckers/English+Oceans/01-08-+Til+Hes+Dead+Or+Rises.mp3' },
+      { title: 'Hanging On', duration: '4:01', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Drive-by+Truckers/English+Oceans/01-09-+Hanging+On.mp3' },
+      { title: 'Natural Light', duration: '5:15', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Drive-by+Truckers/English+Oceans/01-10-+Natural+Light.mp3' },
+      { title: 'When Walter Went Crazy', duration: '3:48', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Drive-by+Truckers/English+Oceans/01-11-+When+Walter+Went+Crazy.mp3' },
+      { title: 'First Air Of Autumn', duration: '3:27', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Drive-by+Truckers/English+Oceans/01-12-+First+Air+Of+Autumn.mp3' },
+      { title: 'Grand Canyon', duration: '7:50', mimeType: 'audio/mpeg', audioSrc: 'https://s3-us-west-2.amazonaws.com/jotis-public/_audio/Drive-by+Truckers/English+Oceans/01-13-+Grand+Canyon.mp3' }
+      ]
 }];
