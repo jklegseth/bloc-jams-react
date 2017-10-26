@@ -2,7 +2,11 @@
 
 A simple music player (faux) website with only React (no Redux, etc).
 
-![](https://www.dropbox.com/s/dalcvimsvcrik77/Screenshot%202017-10-26%2009.22.34.png?raw=1)
+<img src="https://www.dropbox.com/s/9etfszwepmv2l4l/Screenshot%202017-10-26%2013.56.21.png?raw=1" width="300">
+
+<img src="https://www.dropbox.com/s/quk2lot58pcpxe6/Screenshot%202017-10-26%2013.56.45.png?raw=1" width="300">
+
+<img src="https://www.dropbox.com/s/iy8gisg07xc3sqj/Screenshot%202017-10-26%2013.57.04.png?raw=1" width="300">
 
 What's kinda cool:
 - play music from album song list
