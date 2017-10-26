@@ -28,8 +28,8 @@ class SongRow extends Component {
         onMouseEnter={ this.onHover.bind(this) }
         onMouseLeave={ this.offHover.bind(this) }
       >
-        <td className={"song-number" + (isPlaying ? ' playing' : '')}>
-          <a className="song-play-pause" onClick={ () => this.props.handleSongClick(this.props.song) }>
+        <td className={"song-number" + (isPlaying ? ' playing' : '')} onClick={ () => this.props.handleSongClick(this.props.song) }>
+          <a className="song-play-pause">
             <span className={isPlaying || this.state.hover ? playPauseClass : ''}>
                 { !isPlaying && !this.state.hover ? this.props.index + 1 : '' }
             </span>
