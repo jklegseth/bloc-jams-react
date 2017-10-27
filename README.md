@@ -22,6 +22,7 @@ Not so great:
 - no dynamic loading of albums
 - if autoplaying and the current song is below the viewport it stays there
 - home page content is pretty useless (the vibe and image is cool, though)
+- need to add waiting indicator for library page and album songs
 
 Wishlist:
 - by far the most desirable would be loading albums and songs dynamically to expand the collection and stop requiring audio files stored with the app, but as this is mostly a proof-of-concept (not to mention we hardly need another music player). While this isn't intended to be _real_ app it would be a useful exercise to store album data in Firebase.
