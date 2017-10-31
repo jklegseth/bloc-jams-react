@@ -37,11 +37,31 @@ class Album extends Component {
   }
 
   play(song) {
-    this.audioElement.play();
-    this.setState({
-      isPlaying: true,
-      isPaused: false
-    });
+    let playPromise = this.audioElement.play();
+
+    // song and dance to avoid errors due to `play()` being async.
+    // the `if...else` is because in most browsers (not Edge of course)
+    // `play` is a promise, so we wait for it before setting state,
+    // _and_ we catch and silently let errors go by because the error:
+    // `The play() request was interrupted by a new load request.`
+    // isn't very useful and `play` still seems to work.
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        this.setState({
+          isPlaying: true,
+          isPaused: false
+        });
+      })
+      .catch(error => {
+        //no handling
+      })
+    } else {
+      // else state for browsers where `play` is not a `promise`
+      this.setState({
+        isPlaying: true,
+        isPaused: false
+      });
+    }
   }
 
   pause(song) {
