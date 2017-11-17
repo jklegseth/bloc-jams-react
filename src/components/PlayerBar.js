@@ -7,13 +7,13 @@ class PlayerBar extends Component {
       <section className="player-bar">
         <div className="container">
           <div className="main-controls">
-            <button id="previous" onClick={ this.props.handlePrevClick }>
+            <button id="previous" onClick={this.props.handlePrevClick}>
               <span className="ion-skip-backward"></span>
             </button>
-            <button className="player-bar-play-pause" id="play-pause" onClick={ this.props.handleSongClick }>
-              <span className={ this.props.isPlaying ? 'ion-pause' : 'ion-play' }></span>
+            <button className="player-bar-play-pause" id="play-pause" onClick={this.props.handleSongClick}>
+              <span className={this.props.isPlaying ? 'ion-pause' : 'ion-play'}></span>
             </button>
-            <button id="next" onClick={ this.props.handleNextClick }>
+            <button id="next" onClick={this.props.handleNextClick}>
               <span className="ion-skip-forward"></span>
             </button>
           </div>
@@ -24,25 +24,25 @@ class PlayerBar extends Component {
             <input
               type="range"
               className="seek-bar"
-              value={ (this.props.currentTime / this.props.duration) || 0 }
+              value={(this.props.currentTime / this.props.duration) || 0}
               max="1"
               min="0"
               step="0.01"
-              onChange={ this.props.handleTimeChange }
+              onChange={this.props.handleTimeChange}
             />
-            <div className="current-time">{ this.props.formatTime(this.props.currentTime) }</div>
-            <div className="total-time">{ this.props.formatTime(this.props.duration) }</div>
+            <div className="current-time">{this.props.formatTime(this.props.currentTime)}</div>
+            <div className="total-time">{this.props.formatTime(this.props.duration)}</div>
           </div>
           <div className="volume">
-            <span className={ this.props.isMuted ? 'icon ion-volume-mute' : 'icon ion-volume-high' } onClick={ this.props.toggleMute }></span>
+            <span className={this.props.isMuted ? 'icon ion-volume-mute' : 'icon ion-volume-high'} onClick={this.props.toggleMute}></span>
             <input
               type="range"
               className="seek-bar"
-              value={ this.props.currentVolume }
+              value={this.props.currentVolume}
               max="1"
               min="0"
               step=".1"
-              onChange={ this.props.handleVolumeChange }
+              onChange={this.props.handleVolumeChange}
             />
           </div>
         </div>

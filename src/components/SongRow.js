@@ -5,7 +5,7 @@ class SongRow extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {  hover: false }
+    this.state = { hover: false }
   }
 
   onHover() {
@@ -26,18 +26,18 @@ class SongRow extends Component {
       <tr
         className={"song" + (isPlaying ? ' playing' : '')}
         key={ this.props.index }
-        onMouseEnter={ this.onHover.bind(this) }
-        onMouseLeave={ this.offHover.bind(this) }
+        onMouseEnter={this.onHover.bind(this)}
+        onMouseLeave={this.offHover.bind(this)}
       >
-        <td className={"song-number" + (isPlaying ? ' playing' : '')} onClick={ () => this.props.handleSongClick(this.props.song) }>
+        <td className={"song-number" + (isPlaying ? ' playing' : '')} onClick={() => this.props.handleSongClick(this.props.song)}>
           <a className="song-play-pause">
             <span className={isPlaying || this.state.hover ? playPauseClass : ''}>
-                { !isPlaying && !this.state.hover ? this.props.index + 1 : '' }
+                {!isPlaying && !this.state.hover ? this.props.index + 1 : ''}
             </span>
           </a>
         </td>
-        <td className="song-title">{ this.props.song.title }</td>
-        <td className="song-duration">{ this.props.song.duration }</td>
+        <td className="song-title">{this.props.song.title}</td>
+        <td className="song-duration">{this.props.song.duration}</td>
       </tr>
     )
   }

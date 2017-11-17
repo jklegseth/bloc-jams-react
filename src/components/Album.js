@@ -184,7 +184,7 @@ class Album extends Component {
         <section className="container narrow">
           <div className="clearfix">
             <div className="column half">
-              <img src={ this.state.album.albumCover } className="album-cover" alt={this.state.album.title} />
+              <img src={this.state.album.albumCover} className="album-cover" alt={this.state.album.title} />
             </div>
             <div className="album-details column half">
               <h2 className="album-title" id="album-title">{ this.state.album.title }</h2>
@@ -204,32 +204,32 @@ class Album extends Component {
             {
               this.state.album.songs.map((song, index) => {
                 return <SongRow
-                  song={ song }
-                  key={ index }
-                  index={ index }
-                  isPlaying={ this.state.isPlaying }
-                  isPaused={ this.state.isPaused }
-                  isSelectedSong={ index === this.state.currentSongIndex }
-                  handleSongClick={ () => this.handleSongClick(song) }
+                  song={song}
+                  key={index}
+                  index={index}
+                  isPlaying={this.state.isPlaying}
+                  isPaused={this.state.isPaused}
+                  isSelectedSong={index === this.state.currentSongIndex}
+                  handleSongClick={() => this.handleSongClick(song)}
                 />
               })
             }
             </tbody>
           </table>
           <PlayerBar
-            isPlaying={ this.state.isPlaying }
-            currentSong={ this.state.currentSong }
-            currentTime={ this.audioElement.currentTime }
-            currentVolume={ this.state.currentVolume }
-            duration={ this.audioElement.duration }
-            isMuted={ this.state.isMuted }
-            handleSongClick={ () => this.handleSongClick(this.state.currentSong) }
-            handlePrevClick={ () => this.handlePrevClick() }
-            handleNextClick={ () => this.handleNextClick() }
-            handleTimeChange={ (e) => this.handleTimeChange(e) }
-            handleVolumeChange={ (e) => this.handleVolumeChange(e) }
-            formatTime={ (seconds) => this.formatTime(seconds) }
-            toggleMute={ () => this.toggleMute() }
+            isPlaying={this.state.isPlaying}
+            currentSong={this.state.currentSong}
+            currentTime={this.audioElement.currentTime}
+            currentVolume={this.state.currentVolume}
+            duration={this.audioElement.duration}
+            isMuted={this.state.isMuted}
+            handleSongClick={() => this.handleSongClick(this.state.currentSong)}
+            handlePrevClick={() => this.handlePrevClick()}
+            handleNextClick={() => this.handleNextClick()}
+            handleTimeChange={(e) => this.handleTimeChange(e)}
+            handleVolumeChange={(e) => this.handleVolumeChange(e)}
+            formatTime={(seconds) => this.formatTime(seconds)}
+            toggleMute={() => this.toggleMute()}
           />
         </div>
       </div>
