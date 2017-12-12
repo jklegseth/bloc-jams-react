@@ -29,6 +29,8 @@ class PlayerBar extends Component {
               min="0"
               step="0.01"
               onChange={this.props.handleTimeChange}
+              onMouseUp={this.props.onDragEnd}
+              onMouseDown={this.props.onDragStart}
             />
             <div className="current-time">{this.props.formatTime(this.props.currentTime)}</div>
             <div className="total-time">{this.props.formatTime(this.props.duration)}</div>
@@ -65,6 +67,8 @@ PlayerBar.propTypes = {
   toggleMute: PropTypes.func.isRequired,
   currentTime: PropTypes.number,
   duration: PropTypes.number,
+  onDragEnd: PropTypes.func.isRequired,
+  onDragStart: PropTypes.func.isRequired,
 }
 
 export default PlayerBar;

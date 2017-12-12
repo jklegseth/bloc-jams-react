@@ -23,7 +23,8 @@ class Album extends Component {
       isPlaying: false,
       isPaused: false,
       isMuted: false,
-      premuteVolume: .7
+      premuteVolume: .7,
+      isDragging: false
     }
 
     this.audioElement = document.createElement('audio');
@@ -34,6 +35,8 @@ class Album extends Component {
     this.onDurationChange = this.onDurationChange.bind(this);
     this.onVolumeChange = this.onVolumeChange.bind(this);
     this.onEnded = this.onEnded.bind(this);
+    this.onDragStart = this.onDragStart.bind(this);
+    this.onDragEnd = this.onDragEnd.bind(this);
   }
 
   play(song) {
@@ -119,14 +122,27 @@ class Album extends Component {
   handleNextClick() {
     const currentIndex = this.state.album.songs.findIndex(song => this.state.currentSong === song);
     const newIndex = Math.min(this.state.album.songs.length - 1, currentIndex + 1);
-    const newSong = this.state.album.songs[newIndex];
-    this.setSong(newSong);
-    this.play(newSong);
+    let newSong = this.state.album.songs[newIndex];
+
+    // next song if not on last song
+    if (newIndex !== this.state.album.songs.length - 1) {
+      this.setSong(newSong);
+      this.play(newSong);
+    } else {
+      // last song so set to song 0 and set play/pause both to false
+      newSong = this.state.album.songs[0];
+      this.setSong(newSong);
+      this.setState({
+        isPlaying: false,
+        isPaused: false
+      });
+    }
   }
 
   handleTimeChange(e) {
+    console.log('handleTimeChange');
     const newTime = this.audioElement.duration * e.target.value;
-    this.audioElement.currentTime = newTime;
+    this.audioElement.currentTime = newTime || 0;
     this.setState({ currentTime: newTime });
   }
 
@@ -160,7 +176,22 @@ class Album extends Component {
   }
 
   onEnded() {
-    this.handleNextClick();
+    // We're ignoring this event if the user is dragging
+    // the location seekbar (mousedown)
+    if (!this.state.isDragging) {
+      this.handleNextClick();
+    }
+  }
+
+  onDragEnd() {
+    this.setState({ isDragging: false });
+    if (this.state.currentTime >= this.state.duration) {
+      this.handleNextClick();
+    }
+  }
+
+  onDragStart() {
+    this.setState({ isDragging: true });
   }
 
   componentDidMount() {
@@ -230,6 +261,8 @@ class Album extends Component {
             handleVolumeChange={(e) => this.handleVolumeChange(e)}
             formatTime={(seconds) => this.formatTime(seconds)}
             toggleMute={() => this.toggleMute()}
+            onDragEnd={(e) => this.onDragEnd(e)}
+            onDragStart={() => this.onDragStart()}
           />
         </div>
       </div>
